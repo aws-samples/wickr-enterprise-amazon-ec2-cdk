@@ -34,8 +34,8 @@ curl -sSL -o install.sh https://get.replicated.com/docker/wickrenterprise/stable
     - Select **[0]** to set **Eth0** as the Private IP.
     - Select **[0]** to select the **Default** for the Public IP.
     - Select **'N'** when asked if the machine requires a proxy.
-10. The installation script will now complete its tasks and present you with a URL to connect to the messaging server with. 
-11. Continue using the Wickr Enterprise Installation guide, as found in the `administration-guides` folder from **section 4.3**. The SSO and Installation guides are also added for your reference.
+10. Once the installation script has completed, you will be presented with a URL to browse to.
+11. Continue using the Wickr Enterprise Installation guide, as found in the `administration-guides` folder from **section 4.3**. The SSO and Administration guides are also added for your reference.
 
 # Cleanup 
 
