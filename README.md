@@ -1,12 +1,12 @@
 ![architecture](assets/images/architecture.png?raw=true)
 
-#  AWS Wickr Enterprise Infrastructure Deployment
+#  Wickr Enterprise Deployment to Amazon EC2 using CDK
 
-This will deploy the infrastructure required to run Wickr Enterprise. At a high level, this is what you will get;
+This will deploy the infrastructure required to run Wickr Enterprise using Amazon EC2. At a high level, this is what you will get;
 
 - A VPC spanning 2 x AZs, with 2 x Public and 2 x Private Subnets as well as NAT Gateways and appropriate routing.
 - Security groups configured as-per the Wickr Enterprise installation guide.
-- 1 x Messaging, 1 x Voice and Video and 1 x Data Retention EC2 instances (T2 Large), with 120G encrypted storage and Docker CE installed.
+- 1 x Messaging, 1 x Voice and Video and 1 x Data Retention EC2 Nitro System based instances, with encrypted EBS storage and Docker CE pre-installed.
 - Messaging and Voice Video servers in public subnets.
 - Data Retention server in a private subnet, and in a different AZ to the other instances.
 
