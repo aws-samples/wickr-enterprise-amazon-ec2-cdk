@@ -26,7 +26,16 @@ This will deploy the infrastructure required to run Wickr Enterprise using Amazo
 5. Run `cdk deploy --parameters sshIp=1.2.3.4/32 --parameters keyPair=ssh_keypair_name` to deploy the stack, where `sshIp` is your public IP and `ssh_keypair_name` is your pre-existing SSH KeyPair name.
 6. Once the deployment finishes, you will see the public IP's of the Messaging and Voice server as output as well as the instance id of the retention server. You can connect to that via SSM Session Manager, or by using SSM SSH (instructions [here](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-getting-started-enable-ssh-connections.html)
 7. SSH to the Messaging server `ssh ec2-user@<messaging-server-Ip>`
-8. Continue using the Wickr Enterprise Installation guide, as found in the `administration-guides` folder from **section 4.1**. The SSO and Installation guides are also added for your reference.
+8. Enter the following command:
+```bash
+curl -sSL -o install.sh https://get.replicated.com/docker/wickrenterprise/stable && sudo bash ./install.sh
+```
+9. You will now be asked to select which network addresses are attached to the server:
+    - Select **[0]** to set **Eth0** as the Private IP.
+    - Select **[0]** to select the **Default** for the Public IP.
+    - Select **'N'** when asked if the machine requires a proxy.
+10. The installation script will now complete its tasks and present you with a URL to connect to the messaging server with. 
+11. Continue using the Wickr Enterprise Installation guide, as found in the `administration-guides` folder from **section 4.3**. The SSO and Installation guides are also added for your reference.
 
 # Cleanup 
 
